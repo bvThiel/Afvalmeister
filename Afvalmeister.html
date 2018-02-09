@@ -1,0 +1,575 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="Afvalmeister.css">
+  </head>
+  <body>
+  <div id="agenda" class="agenda">
+
+<select id="woonplaats" onchange="getDateCalendar()" required>
+    <option value="">Kies een optie</option>
+    <option value="BN">Bilthoven Noord</option>
+    <option value="BZ">Bilthoven Zuid</option>
+    <option value="MD">Maartensdijk</option>
+    </select> 
+
+  <div class="" style="display: table;">
+  <button onclick="previous()" style="display: table-cell; height: "> < </button>
+  <div id="maand" class="month">Jan</div>
+  <button onclick="next()" style=" display: table-cell;"> > </button>
+  <div id="jaar" class="year"></div>
+  </div>
+  
+ <div style="margin-top:0px">
+  <div id="maandag" class="dayHead">ma</div>
+  <div id="dinsdag" class="dayHead">di</div>
+  <div id="woensdag" class="dayHead">wo</div>
+  <div id="donderdag" class="dayHead">do</div>
+  <div id="vrijdag" class="dayHead">vrij</div>
+  <div id="zaterdag" class="dayHead">za</div>
+  <div id="zondag" class="dayHead">zo</div>
+</div>
+
+<div id="week1" class="week">
+  <div id="" class="day">
+    <div id="oneOne" class="datum"></div>
+    <div id="one" name="oneOne" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="oneTwo" class="datum"></div>
+    <div id="two" name="oneTwo" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="oneThree" class="datum"></div>
+    <div id="three" name="oneThree" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="oneFour" class=""></div>
+    <div id="four" name="oneFour" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="oneFive" class=""></div>
+    <div id="five" name="oneFive" class="kliko"></div>
+  </div>
+  <div id="" class="day weekend">
+    <div id="oneSix" class=""></div>
+    <div id="six" name="oneSix" class="kliko"></div>
+  </div>
+  <div id="" class="day weekend">
+    <div id="oneSeven" class=""></div>
+    <div id="seven" name="oneSeven" class="kliko"></div>
+  </div>
+</div>
+  
+<div id="week2" class="week">
+  <div id="" class="day">
+    <div id="twoOne" class="datum"></div>
+    <div id="eight" name="twoOne" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="twoTwo" class="datum"></div>
+    <div id="nine" name="twoTwo" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="twoThree" class="datum"></div>
+    <div id="ten" name="twoThree" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="twoFour" class="datum"></div>
+    <div id="eleven" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="twoFive" class="datum"></div>
+    <div id="twelve" name="twoFive" class="kliko"></div>
+  </div>
+  <div id="" class="day weekend">
+    <div id="twoSix" class="datum"></div>
+    <div id="thirteen" name="twoSix" class="kliko"></div>
+  </div>
+  <div id="" class="day weekend">
+    <div id="twoSeven" class="datum"></div>
+    <div id="fourteen" name="twoSeven" class="kliko"></div>
+  </div>
+</div>
+
+<div id="week3" class="week">
+  <div id="" class="day">
+    <div id="threeOne" class="datum"></div>
+    <div id="fifteen" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="threeTwo" class="datum"></div>
+    <div id="sixteen" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="threeThree" class="datum"></div>
+    <div id="seventeen" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="threeFour" class="datum"></div>
+    <div id="eighteen" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="threeFive" class="datum"></div>
+    <div id="nineteen" class="kliko"></div>
+  </div>
+  <div id="" class="day weekend">
+    <div id="threeSix" class="datum"></div>
+    <div id="twenty" class="kliko"></div>
+  </div>
+  <div id="" class="day weekend">
+    <div id="threeSeven" class="datum"></div>
+    <div id="twentyone" class="kliko"></div>
+  </div>
+</div>
+
+<div id="week4" class="week">
+  <div id="" class="day">
+    <div id="fourOne" class="datum"></div>
+    <div id="twentytwo" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="fourTwo" class="datum"></div>
+    <div id="twentythree" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="fourThree" class="datum"></div>
+    <div id="twentyfour" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="fourFour" class="datum"></div>
+    <div id="twentyfive" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="fourFive" class="datum"></div>
+    <div id="twentysix" class="kliko"></div>
+  </div>
+  <div id="" class="day weekend">
+    <div id="fourSix" class="datum"></div>
+    <div id="twentyseven" class="kliko"></div>
+  </div>
+  <div id="" class="day weekend">
+    <div id="fourSeven" class="datum"></div>
+    <div id="twentyeight" class="kliko"></div>
+  </div>
+</div>
+  
+<div id="week5" class="week">
+  <div id="" class="day">
+    <div id="fiveOne" class="datum"></div>
+    <div id="twentynine" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="fiveTwo" class="datum"></div>
+    <div id="thirty" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="fiveThree" class="datum"></div>
+    <div id="thirtyone" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="fiveFour" class="datum"></div>
+    <div id="thirtytwo" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="fiveFive" class="datum"></div>
+    <div id="thirtythree" class="kliko"></div>
+  </div>
+  <div id="" class="day weekend">
+    <div id="fiveSix" class="datum"></div>
+    <div id="thirtyfour" class="kliko"></div>
+  </div>
+  <div id="" class="day weekend">
+    <div id="fiveSeven" class="datum"></div>
+    <div id="thirtyfive" class="kliko"></div>
+  </div>
+</div>
+  
+<div id="week6" class="week">
+  <div id="" class="day">
+    <div id="sixOne" class="datum"></div>
+    <div id="thirtysix" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="sixTwo" class="datum"></div>
+    <div id="thirtyseven" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="sixThree" class="datum"></div>
+    <div id="thirtyeight" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="sixFour" class="datum"></div>
+    <div id="thirtynine" class="kliko"></div>
+  </div>
+  <div id="" class="day">
+    <div id="sixFive" class="datum"></div>
+    <div id="fourty" class="kliko"></div>
+  </div>
+  <div id="" class="day weekend">
+    <div id="sixSix" class="datum"></div>
+    <div id="fourtyone" class="kliko"></div>
+  </div>
+  <div id="" class="day weekend">
+    <div id="sixSeven" class="datum"></div>
+    <div id="fourtytwo" class="kliko"></div>
+  </div>
+</div>
+    
+    <div id="leganda" class="">
+  <div id="" class="legenda">Grijs:
+    <div style="background-color:gray" class="kliko"></div>
+  </div>
+  <div id="" class="legenda">Groen:
+    <div style="background-color:green" class="kliko"></div>
+  </div>
+  <div id="" class="legenda">Oranje:
+    <div style="background-color:orange" class="kliko"></div>
+  </div>
+  <div id="" class="legenda">Blauw:
+    <div style="background-color:blue" class="kliko"></div>
+  </div>
+  <div id="" class="legenda">Snoeihout:    
+    <div style="background-color:yellow" class="kliko"></div>
+  </div>
+  <div id="" class="legenda">Kerstboom:
+    <div style="background-color:purple" class="kliko"></div>
+  </div>
+  
+  
+</div>
+    
+  </div>
+
+<p id="day" style="font-family:Helvetica; font-size:13px;"></p>  
+
+<script>
+var date = new Date();  
+var monthSelected = date.getMonth();      //Januari = 0
+var yearSelected = date.getFullYear();
+var monthWord;
+var todayDate = date.getDate(); 
+var notification;
+var colorTrash;
+var startDay = [caly, calx];
+
+var calendar = ["oneOne", "oneTwo", "oneThree", "oneFour", "oneFive", "oneSix", "oneSeven", "twoOne", "twoTwo", "twoThree", "twoFour", "twoFive", "twoSix", "twoSeven", "threeOne", "threeTwo", "threeThree", "threeFour", "threeFive", "threeSix", "threeSeven", "fourOne", "fourTwo", "fourThree", "fourFour", "fourFive", "fourSix", "fourSeven", "fiveOne", "fiveTwo", "fiveThree", "fiveFour", "fiveFive", "fiveSix", "fiveSeven", "sixOne", "sixTwo", "sixThree", "sixFour", "sixFive", "sixSix", "sixSeven"];
+var idKliko = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "twentyone", "twentytwo", "twentythree", "twentyfour", "twentyfive", "twentysix", "twentyseven", "twentyeight", "twentynine", "thirty", "thirtyone", "thirtytwo", "thirtythree", "thirtyfour", "thirtyfive", "thirtysix", "thirtyseven", "thirtyeight", "thirtynine", "fourty", "fourtyone", "fourtytwo"];
+
+function next() {
+  monthSelected = monthSelected + 1;
+  
+  if (monthSelected > 11) {
+    monthSelected = monthSelected - 12;
+    yearSelected = yearSelected + 1;
+  }
+  else if (monthSelected < 0) {
+    monthSelected = monthSelected + 12;
+    yearSelected = yearSelected - 1;
+  }
+  
+  getDateCalendar();
+}
+
+function previous() {
+  monthSelected = monthSelected - 1;
+  
+  if (monthSelected > 11) {
+    monthSelected = monthSelected - 12;
+    yearSelected = yearSelected + 1;
+  }
+  else if (monthSelected < 0) {
+    monthSelected = monthSelected + 12;
+    yearSelected = yearSelected - 1;
+  }
+  
+  getDateCalendar();
+}
+
+var calx;
+var caly;
+
+
+function getDateCalendar() { //oneSeven verplaatsen naar plek 7
+var dayInMonth = [31,28,31,30,31,30,31,31,30,31,30,31];
+var correctionBeginDay = [5,6,0,1,2,3,4];
+var dSelected = new Date(yearSelected,monthSelected,1,0,0,0,0);
+var beginDay = dSelected.getDay();
+
+  for (i = 0; i < calendar.length; i++) {
+    document.getElementById(calendar[i]).innerHTML = "";
+}
+  for (i=0; i < idKliko.length; i++) {
+    document.getElementById(idKliko[i]).style.backgroundColor = "";
+  }
+
+var district = document.getElementById("woonplaats").value;  
+  
+switch(beginDay) {
+  case 1:
+    answer = 
+    calx = "One";   
+  break;
+    case 2:
+    answer = 
+    calx = "Two";
+  break;
+    case 3:
+    answer = 
+    calx = "Three";
+  break;
+    case 4:
+    answer = 
+    calx = "Four";
+  break;
+    case 5:
+    answer = 
+    calx = "Five";
+  break;
+    case 6:
+    answer = 
+    calx = "Six";
+  break;
+    case 0:
+    answer = 
+    calx = "Seven";    
+  break;
+}
+  
+  for (i = 1; i <= dayInMonth[monthSelected]; i++) {
+    document.getElementById(calendar[i+correctionBeginDay[beginDay]]).innerHTML = i;
+    document.getElementById(calendar[i+correctionBeginDay[beginDay]]).style.backgroundColor = "";
+    document.getElementById(calendar[i+correctionBeginDay[beginDay]]).style.color = "";
+}
+    
+  if (monthSelected == date.getMonth() && yearSelected == date.getFullYear()) {
+    document.getElementById(calendar[todayDate+correctionBeginDay[beginDay]]).style.backgroundColor = "red";
+    document.getElementById(calendar[todayDate+correctionBeginDay[beginDay]]).style.color = "white";
+  }
+  else {}
+
+
+  if (district == "BN") {
+    var klikoJAN = [];
+  klikoJAN[0] = new Array ("eleven", "orange"); // plus 7
+  klikoJAN[1] = new Array ("thirteen", "blue");
+  klikoJAN[2] = new Array ("eighteen", "green");
+  klikoJAN[3] = new Array ("twentythree", "purple");
+  klikoJAN[4] = new Array ("twentyfive", "orange");
+  klikoJAN[5] = new Array ("twentynine", "gray");
+  klikoJAN[6] = new Array ("thirtytwo", "green");
+    var klikoFEB = [];
+  klikoFEB[0] = new Array ("four", "orange"); // plus 3
+  klikoFEB[1] = new Array ("six", "blue");
+  klikoFEB[2] = new Array ("thirteen", "green"); //moet eleven zijn
+  klikoFEB[3] = new Array ("fifteen", "gray");
+  klikoFEB[4] = new Array ("eighteen", "orange");
+  klikoFEB[5] = new Array ("twentyfive", "green");
+    var klikoMAA = [];
+  klikoMAA[0] = new Array ("four", "orange"); // plus 3
+  klikoMAA[1] = new Array ("six", "blue");
+  klikoMAA[2] = new Array ("eight", "gray");
+  klikoMAA[3] = new Array ("eleven", "green"); 
+  klikoMAA[4] = new Array ("eighteen", "orange");
+  klikoMAA[5] = new Array ("twentyfive", "green");
+  klikoMAA[6] = new Array ("twentynine", "gray");
+  klikoMAA[7] = new Array ("thirtytwo", "orange");
+    var klikoAPR = [];
+  klikoAPR[0] = new Array ("eleven", "green"); // plus 6
+  klikoAPR[1] = new Array ("thirteen", "blue");
+  klikoAPR[2] = new Array ("eighteen", "orange");
+  klikoAPR[3] = new Array ("twentytwo", "gray");
+  klikoAPR[4] = new Array ("twentythree", "yellow");
+  klikoAPR[5] = new Array ("twentyfive", "green");
+  klikoAPR[6] = new Array ("thirtytwo", "orange");
+    var klikoMEI = [];
+  klikoMEI[0] = new Array ("four", "green"); // plus 1
+  klikoMEI[1] = new Array ("six", "blue");
+  klikoMEI[2] = new Array ("eight", "gray");
+  klikoMEI[3] = new Array ("thirteen", "orange");
+  klikoMEI[4] = new Array ("eighteen", "green");
+  klikoMEI[5] = new Array ("twentyfive", "orange");
+  klikoMEI[6] = new Array ("twentynine", "gray");
+  klikoMEI[7] = new Array ("thirtytwo", "green");
+    var klikoJUN = [];
+  klikoJUN[0] = new Array ("six", "blue"); // plus 4
+  klikoJUN[1] = new Array ("eleven", "orange");
+  klikoJUN[2] = new Array ("eighteen", "green");
+  klikoJUN[3] = new Array ("twentytwo", "gray");
+  klikoJUN[4] = new Array ("twentyfive", "orange");
+  klikoJUN[5] = new Array ("thirtytwo", "green");
+    var klikoJUL = [];
+  klikoJUL[0] = new Array ("eleven", "orange"); // plus 6
+  klikoJUL[1] = new Array ("thirteen", "blue");
+  klikoJUL[2] = new Array ("fifteen", "gray");
+  klikoJUL[3] = new Array ("eighteen", "green");
+  klikoJUL[4] = new Array ("twentyfive", "orange");
+  klikoJUL[5] = new Array ("thirtytwo", "green");
+  klikoJUL[6] = new Array ("thirtysix", "gray");
+    var klikoAUG = [];
+  klikoAUG[0] = new Array ("four", "orange"); // plus 2
+  klikoAUG[1] = new Array ("six", "blue");
+  klikoAUG[2] = new Array ("eleven", "green");
+  klikoAUG[3] = new Array ("eighteen", "orange");
+  klikoAUG[4] = new Array ("twentytwo", "gray");
+  klikoAUG[5] = new Array ("twentyfive", "green");
+  klikoAUG[6] = new Array ("thirtytwo", "orange");
+    var klikoSEP = [];
+  klikoSEP[0] = new Array ("six", "blue"); // plus 5
+  klikoSEP[1] = new Array ("eleven", "green");
+  klikoSEP[2] = new Array ("fifteen", "gray");
+  klikoSEP[3] = new Array ("eighteen", "orange");
+  klikoSEP[4] = new Array ("twentyfive", "green");
+  klikoSEP[5] = new Array ("thirtytwo", "orange");
+    var klikoOKT = [];
+  klikoOKT[0] = new Array ("eight", "gray"); // plus 7
+  klikoOKT[1] = new Array ("eleven", "green");
+  klikoOKT[2] = new Array ("thirteen", "blue");
+  klikoOKT[3] = new Array ("eighteen", "orange");
+  klikoOKT[4] = new Array ("twentythree", "yellow");
+  klikoOKT[5] = new Array ("twentyfive", "green");
+  klikoOKT[6] = new Array ("twentynine", "gray");
+  klikoOKT[7] = new Array ("thirtytwo", "orange");
+    var klikoNOV = [];
+  klikoNOV[0] = new Array ("four", "green"); // plus 3
+  klikoNOV[1] = new Array ("six", "blue");
+  klikoNOV[2] = new Array ("eleven", "orange");
+  klikoNOV[3] = new Array ("fifteen", "gray");
+  klikoNOV[4] = new Array ("eighteen", "green");
+  klikoNOV[5] = new Array ("twentyfive", "orange");
+  klikoNOV[6] = new Array ("thirtytwo", "green");
+    var klikoDEC = [];
+  klikoDEC[0] = new Array ("six", "blue"); // plus 5
+  klikoDEC[1] = new Array ("eight", "gray");
+  klikoDEC[2] = new Array ("eleven", "orange");
+  klikoDEC[3] = new Array ("eighteen", "green");
+  klikoDEC[4] = new Array ("twentyfive", "orange");
+  klikoDEC[5] = new Array ("twentynine", "gray");
+  klikoDEC[6] = new Array ("thirtytwo", "green");
+  }
+  else {}
+
+
+switch(monthSelected) {
+    case 0:
+      monthWord = "Januari";
+    for(i = 0; i < klikoJAN.length; i++){
+      document.getElementById(klikoJAN[i][0]).style.backgroundColor = klikoJAN[i][1];
+    }
+    break;
+    case 1:
+      monthWord = "Februari";
+    for(i = 0; i < klikoFEB.length; i++){
+      document.getElementById(klikoFEB[i][0]).style.backgroundColor = klikoFEB[i][1];
+    }
+        break;
+    case 2:
+      monthWord = "Maart";
+    for(i = 0; i < klikoMAA.length; i++){
+      document.getElementById(klikoMAA[i][0]).style.backgroundColor = klikoMAA[i][1];
+    }
+        break;
+    case 3:
+      monthWord = "April";
+    for(i = 0; i < klikoAPR.length; i++){
+      document.getElementById(klikoAPR[i][0]).style.backgroundColor = klikoAPR[i][1];
+    }
+        break;
+    case 4:
+      monthWord = "Mei";
+    for(i = 0; i < klikoMEI.length; i++){
+      document.getElementById(klikoMEI[i][0]).style.backgroundColor = klikoMEI[i][1];
+    }
+        break;
+    case 5:
+      monthWord = "Juni";
+    for(i = 0; i < klikoJUN.length; i++){
+      document.getElementById(klikoJUN[i][0]).style.backgroundColor = klikoJUN[i][1];
+    }
+        break;
+    case 6:
+      monthWord = "Juli";
+    for(i = 0; i < klikoJUL.length; i++){
+      document.getElementById(klikoJUL[i][0]).style.backgroundColor = klikoJUL[i][1];
+    }
+        break;
+    case 7:
+      monthWord = "Augustus";
+    for(i = 0; i < klikoAUG.length; i++){
+      document.getElementById(klikoAUG[i][0]).style.backgroundColor = klikoAUG[i][1];
+    }
+        break;
+    case 8:
+      monthWord = "September";
+    for(i = 0; i < klikoSEP.length; i++){
+      document.getElementById(klikoSEP[i][0]).style.backgroundColor = klikoSEP[i][1];
+    }
+        break;
+    case 9:
+      monthWord = "Oktober";
+    for(i = 0; i < klikoOKT.length; i++){
+      document.getElementById(klikoOKT[i][0]).style.backgroundColor = klikoOKT[i][1];
+    }
+        break;
+    case 10:
+      monthWord = "November";
+    for(i = 0; i < klikoNOV.length; i++){
+      document.getElementById(klikoNOV[i][0]).style.backgroundColor = klikoNOV[i][1];
+    }
+        break;
+    case 11:
+      monthWord = "December";
+    for(i = 0; i < klikoDEC.length; i++){
+      document.getElementById(klikoDEC[i][0]).style.backgroundColor = klikoDEC[i][1];
+    }
+        break;
+}
+  
+    if (yearSelected !== 2018) {
+      document.getElementById("day").innerHTML = "De kliko planning van dit jaar zit niet in deze app";
+  }
+    else {}
+     
+var colorKliko = document.getElementById(idKliko[todayDate+1+correctionBeginDay[beginDay]]).style.backgroundColor;      
+            if (colorKliko !== "" && monthSelected == date.getMonth() && yearSelected == date.getFullYear()){
+        notification = "true"; 
+      }
+      else {
+        notification = "false";   
+      }
+  
+  switch(colorKliko) {
+    case "green":
+    colorTrash = "Zet de groene bak (GFT) buiten";
+    break;
+    case "blue":
+    colorTrash = "Zet de blauwe bak (papier) buiten";
+    break;
+    case "orange":
+    colorTrash = "Zet de oranje bak (PMD) buiten";
+    break;
+    case "gray":
+    colorTrash = "Zet de grijze bak (restafval) buiten";
+    break;
+    case "purple":
+    colorTrash = "Morgen wordt de kerstboom opgehaald";
+    break;
+    case "yellow":
+    colorTrash = "Morgen wordt het snoeihout opgehaald";
+    break;
+} 
+document.getElementById("maand").innerHTML = monthWord;
+document.getElementById("jaar").innerHTML = yearSelected;  
+}
+
+var herhaal = setInterval(sendNotification, 10);
+function sendNotification() {
+  d = new Date();
+if (d.toString() == new Date(date.getFullYear(), date.getMonth(), date.getDate(),19,0,0,0).toString() && notification == "true"){ 
+  alert(colorTrash);
+}
+else{}
+}
+</script>
+
+    </body>
+</html>
